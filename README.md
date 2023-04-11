@@ -23,7 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Tech stack
 
 - [Tailwind CSS](https://tailwindcss.com/)
-- [heroicons by Tailwind](https://heroicons.com/)
+- [heroicons by Tailwind](https://heroicons.com/) - [unpkg list here](https://unpkg.com/browse/@heroicons/react@2.0.17/24/outline/)
 - [Next.js](https://nextjs.org/)
 
 ## Learn More
