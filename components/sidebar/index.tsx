@@ -2,6 +2,8 @@ import React from 'react'
 import { SidebarButton } from './SidebarButton'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
+import ArrowTrendingUpIcon from '@heroicons/react/24/outline/ArrowTrendingUpIcon'
+import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon'
 import Image from 'next/image'
 
 const TOP_OPTIONS = [
@@ -17,16 +19,24 @@ const TOP_OPTIONS = [
       />
     ),
   },
+  {
+    text: 'Shop',
+    icon: <ShoppingBagIcon className="h-9 w-9" />,
+  },
+  {
+    text: 'Trends',
+    icon: <ArrowTrendingUpIcon className="h-9 w-9" />,
+  },
 ]
 
 const BOTTOM_OPTIONS = [
   {
     text: 'Settings',
-    icon: <Cog6ToothIcon className="h-10 w-10" />,
+    icon: <Cog6ToothIcon className="h-9 w-9" />,
   },
   {
     text: 'Account',
-    icon: <UserCircleIcon className="h-10 w-10" />,
+    icon: <UserCircleIcon className="h-9 w-9" />,
   },
 ]
 
