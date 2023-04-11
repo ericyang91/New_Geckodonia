@@ -13,7 +13,7 @@ $tooltip-arrow-size: 6px;
 /* Absolute positioning */
 .TooltipTip {
   position: absolute;
-  border-radius: $border-radius;
+  border-radius: 4px;
   left: 50%;
   transform: translateX(-50%);
   padding: 6px;
