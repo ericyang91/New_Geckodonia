@@ -7,10 +7,10 @@ interface Props {
 
 export const SidebarButton = ({ text, icon }: Props) => {
   return (
-    <button className="h-20 w-20 hover:bg-gray-300 hover:text-green-700">
+    <button className="h-20 w-20 text-gray-300 hover:text-green-400">
       <div className="flex flex-col items-center">
         {icon}
-        <div className="w-full font-semi">{text}</div>
+        {/* <div className="w-full font-semi ">{text}</div> */}
       </div>
     </button>
   )

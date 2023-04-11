@@ -4,7 +4,7 @@ import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
 import Image from 'next/image'
 
-const SIDEBAR_OPTIONS = [
+const TOP_OPTIONS = [
   {
     text: 'Home',
     icon: (
@@ -13,24 +13,36 @@ const SIDEBAR_OPTIONS = [
         alt="geckodonia-logo"
         width={40}
         height={40}
+        className="hover:scale-110"
       />
     ),
   },
+]
+
+const BOTTOM_OPTIONS = [
   {
     text: 'Settings',
-    icon: <Cog6ToothIcon className="h-10 w-10 text-green-600" />,
+    icon: <Cog6ToothIcon className="h-10 w-10" />,
   },
   {
     text: 'Account',
-    icon: <UserCircleIcon className="h-10 w-10 text-green-600" />,
+    icon: <UserCircleIcon className="h-10 w-10" />,
   },
 ]
+
 export const Sidebar = () => {
   return (
-    <div className="w-20 h-screen shadow-md fixed">
-      {SIDEBAR_OPTIONS.map((option) => (
-        <SidebarButton key={option.text} {...option} />
-      ))}
+    <div className="w-20 h-full fixed bg-gray-800 flex flex-col justify-between">
+      <div>
+        {TOP_OPTIONS.map((option) => (
+          <SidebarButton key={option.text} {...option} />
+        ))}
+      </div>
+      <div>
+        {BOTTOM_OPTIONS.map((option) => (
+          <SidebarButton key={option.text} {...option} />
+        ))}
+      </div>
     </div>
   )
 }
