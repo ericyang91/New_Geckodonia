@@ -1,13 +1,29 @@
 import React from 'react'
 import { SidebarButton } from './SidebarButton'
-import HomeIcon from '@heroicons/react/24/outline/HomeIcon'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
+import Image from 'next/image'
 
 const SIDEBAR_OPTIONS = [
-  { text: 'Home', icon: <HomeIcon /> },
-  { text: 'Settings', icon: <Cog6ToothIcon /> },
-  { text: 'Account', icon: <UserCircleIcon /> },
+  {
+    text: 'Home',
+    icon: (
+      <Image
+        src="/brand/geckodonia-logo.png"
+        alt="geckodonia-logo"
+        width={40}
+        height={40}
+      />
+    ),
+  },
+  {
+    text: 'Settings',
+    icon: <Cog6ToothIcon className="h-10 w-10 text-green-600" />,
+  },
+  {
+    text: 'Account',
+    icon: <UserCircleIcon className="h-10 w-10 text-green-600" />,
+  },
 ]
 export const Sidebar = () => {
   return (
