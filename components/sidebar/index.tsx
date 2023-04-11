@@ -1,10 +1,10 @@
 import React from 'react'
-import { SidebarButton } from './SidebarButton'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
 import ArrowTrendingUpIcon from '@heroicons/react/24/outline/ArrowTrendingUpIcon'
 import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon'
 import Image from 'next/image'
+import { SidebarButton } from './SidebarButton'
 
 const TOP_OPTIONS = [
   {

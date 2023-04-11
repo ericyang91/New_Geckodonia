@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tooltip } from '../common/Tooltip'
 
 interface Props {
   text: string
@@ -7,11 +8,10 @@ interface Props {
 
 export const SidebarButton = ({ text, icon }: Props) => {
   return (
-    <button className="h-20 w-20 text-gray-300 hover:text-green-400">
-      <div className="flex flex-col items-center">
-        {icon}
-        {/* <div className="w-full font-semi ">{text}</div> */}
-      </div>
-    </button>
+    <Tooltip content={text} direction="right">
+      <button className="h-20 w-20 text-gray-300 hover:text-green-400">
+        <div className="flex flex-col items-center">{icon}</div>
+      </button>
+    </Tooltip>
   )
 }
