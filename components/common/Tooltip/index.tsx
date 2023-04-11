@@ -28,7 +28,7 @@ export const Tooltip = ({
 
   const hideTip = () => {
     clearInterval(timeout)
-    // setActive(false)
+    setActive(false)
   }
 
   return (
