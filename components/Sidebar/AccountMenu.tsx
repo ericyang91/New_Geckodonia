@@ -5,7 +5,7 @@ import { Avatar } from '../common/Avatar'
 
 export const AccountMenu = () => {
   return (
-    <div className="w-28 h-40">
+    <div className="w-28 h-40 px-1">
       <div className="flex flex-col h-full">
         <button className="flex-1 hover:text-green-600">
           <div className="flex items-center">

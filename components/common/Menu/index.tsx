@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './index.module.scss'
+import { useOutsideAlerter } from '@/hooks/useOutsideAlerter'
 
 interface Props {
   children: React.ReactNode
@@ -10,16 +11,17 @@ interface Props {
 }
 
 export const Menu = ({ children, content, position = 'absolute' }: Props) => {
-  const [isActive, setIsActive] = useState(false)
+  const { isComponentVisible, setIsComponentVisible, ref } =
+    useOutsideAlerter(false)
 
   const handleClick = () => {
-    setIsActive(true)
+    setIsComponentVisible(true)
   }
 
   return (
-    <div className={styles.MenuWrapper} onClick={handleClick}>
+    <div className={styles.MenuWrapper} onClick={handleClick} ref={ref}>
       {children}
-      {isActive && (
+      {isComponentVisible && (
         <div className={`${styles.Menu} ${styles[position]}`}>{content}</div>
       )}
     </div>
