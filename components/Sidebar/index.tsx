@@ -3,9 +3,10 @@ import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
 import ArrowTrendingUpIcon from '@heroicons/react/24/outline/ArrowTrendingUpIcon'
 import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon'
 import Image from 'next/image'
+
 import { SidebarButton } from './SidebarButton'
-import { Menu } from '../common/Menu'
 import { AccountMenu } from './AccountMenu'
+import { Menu } from '../common/Menu'
 
 const TOP_OPTIONS = [
   {
@@ -16,7 +17,7 @@ const TOP_OPTIONS = [
         alt="geckodonia-logo"
         width={40}
         height={40}
-        className="hover:scale-110"
+        className="transition-all hover:scale-125"
       />
     ),
   },
