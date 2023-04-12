@@ -8,12 +8,14 @@ $margin: 4px;
 .Menu {
   border-radius: $border-radius;
   padding: 6px;
-  // color: $tooltip-text-color;
-  background: red;
+  background: $bg-paper-main;
   font-size: 14px;
   line-height: 1;
   z-index: 100;
   white-space: nowrap;
+  -webkit-box-shadow: $menu-box-shadow;
+  -moz-box-shadow: $menu-box-shadow;
+  box-shadow: $menu-box-shadow;
 }
 
 .Menu.absolute {

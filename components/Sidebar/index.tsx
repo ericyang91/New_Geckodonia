@@ -38,7 +38,7 @@ export const Sidebar = () => {
           <SidebarButton key={option.text} {...option} />
         ))}
       </div>
-      <div>
+      <div className="border-gray-600 border-t-2">
         <Menu content={<AccountMenu />} position="fixed-bottom">
           <SidebarButton
             text="Account"

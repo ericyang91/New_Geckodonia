@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import styles from './index.module.scss'
 
 interface Props {
@@ -8,10 +10,18 @@ interface Props {
 }
 
 export const Menu = ({ children, content, position = 'absolute' }: Props) => {
+  const [isActive, setIsActive] = useState(false)
+
+  const handleClick = () => {
+    setIsActive(true)
+  }
+
   return (
-    <div className={styles.MenuWrapper}>
+    <div className={styles.MenuWrapper} onClick={handleClick}>
       {children}
-      <div className={`${styles.Menu} ${styles[position]}`}>{content}</div>
+      {isActive && (
+        <div className={`${styles.Menu} ${styles[position]}`}>{content}</div>
+      )}
     </div>
   )
 }
