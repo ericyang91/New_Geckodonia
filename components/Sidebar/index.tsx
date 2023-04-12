@@ -1,10 +1,11 @@
 import React from 'react'
-import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import UserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon'
 import ArrowTrendingUpIcon from '@heroicons/react/24/outline/ArrowTrendingUpIcon'
 import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon'
 import Image from 'next/image'
 import { SidebarButton } from './SidebarButton'
+import { Menu } from '../common/Menu'
+import { AccountMenu } from './AccountMenu'
 
 const TOP_OPTIONS = [
   {
@@ -29,17 +30,6 @@ const TOP_OPTIONS = [
   },
 ]
 
-const BOTTOM_OPTIONS = [
-  {
-    text: 'Settings',
-    icon: <Cog6ToothIcon className="h-9 w-9" />,
-  },
-  {
-    text: 'Account',
-    icon: <UserCircleIcon className="h-9 w-9" />,
-  },
-]
-
 export const Sidebar = () => {
   return (
     <div className="w-20 h-full fixed bg-gray-800 flex flex-col justify-between">
@@ -49,9 +39,12 @@ export const Sidebar = () => {
         ))}
       </div>
       <div>
-        {BOTTOM_OPTIONS.map((option) => (
-          <SidebarButton key={option.text} {...option} />
-        ))}
+        <Menu content={<AccountMenu />} position="fixed-bottom">
+          <SidebarButton
+            text="Account"
+            icon={<UserCircleIcon className="h-9 w-9" />}
+          />
+        </Menu>
       </div>
     </div>
   )

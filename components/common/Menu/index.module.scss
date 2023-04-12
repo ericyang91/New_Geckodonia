@@ -1,19 +1,36 @@
+$margin: 4px;
+
 .MenuWrapper {
   display: inline-block;
   position: relative;
 }
 
 .Menu {
-  position: absolute;
-  border-radius: 4px;
-  left: 50%;
-  transform: translateX(-50%);
+  border-radius: $border-radius;
   padding: 6px;
-  color: $tooltip-text-color;
-  background: $tooltip-background-color;
+  // color: $tooltip-text-color;
+  background: red;
   font-size: 14px;
-  font-family: sans-serif;
   line-height: 1;
   z-index: 100;
   white-space: nowrap;
+}
+
+.Menu.absolute {
+  position: absolute;
+  transform: translateX(0) translateY(-50%);
+  left: calc(100% + $margin);
+  top: 50%;
+}
+
+.Menu.fixed-bottom {
+  position: fixed;
+  bottom: $margin;
+  left: calc($sidebar-width + $margin);
+}
+
+.Menu.fixed-top {
+  position: fixed;
+  top: $margin;
+  left: calc($sidebar-width + $margin);
 }
