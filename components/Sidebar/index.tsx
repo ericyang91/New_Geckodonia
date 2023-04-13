@@ -33,7 +33,7 @@ const TOP_OPTIONS = [
 
 export const Sidebar = () => {
   return (
-    <div className="w-20 h-full fixed bg-gray-800 flex flex-col justify-between">
+    <aside className="w-20 h-full bg-gray-800 flex flex-col justify-between">
       <div>
         {TOP_OPTIONS.map((option) => (
           <SidebarButton key={option.text} {...option} />
@@ -47,6 +47,6 @@ export const Sidebar = () => {
           />
         </Menu>
       </div>
-    </div>
+    </aside>
   )
 }
