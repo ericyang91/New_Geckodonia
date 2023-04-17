@@ -1,5 +1,6 @@
 import { Sidebar } from '@/components/Sidebar'
 import './globals.css'
+import { Footer } from '@/components/Footer'
 
 export const metadata = {
   title: 'Geckodonia',
@@ -15,7 +16,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Sidebar />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   )
