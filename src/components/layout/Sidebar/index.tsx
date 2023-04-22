@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import { SidebarButton } from './SidebarButton'
 import { AccountMenu } from './AccountMenu'
-import { Menu } from '../common/Menu'
+import { Menu } from '../../common/Menu'
 
 const TOP_OPTIONS = [
   {

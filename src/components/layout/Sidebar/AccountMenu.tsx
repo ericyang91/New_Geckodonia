@@ -1,7 +1,7 @@
 import React from 'react'
 import Cog6ToothIcon from '@heroicons/react/24/outline/Cog6ToothIcon'
 import ArrowLeftOnRectangleIcon from '@heroicons/react/24/outline/ArrowLeftOnRectangleIcon'
-import { Avatar } from '../common/Avatar'
+import { Avatar } from '../../common/Avatar'
 
 export const AccountMenu = () => {
   return (
